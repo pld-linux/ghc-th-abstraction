@@ -6,7 +6,7 @@
 Summary:	Nicer interface for reified information about data types
 Name:		ghc-%{pkgname}
 Version:	0.3.2.0
-Release:	1
+Release:	2
 License:	BSD-Like
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/th-abstraction
