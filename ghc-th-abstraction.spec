@@ -4,6 +4,7 @@
 #
 %define		pkgname	th-abstraction
 Summary:	Nicer interface for reified information about data types
+Summary(pl.UTF-8):	Ładniejszy interfejs do zreifikowanych informacji o typach danych
 Name:		ghc-%{pkgname}
 Version:	0.3.2.0
 Release:	2
@@ -14,13 +15,16 @@ Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{v
 # Source0-md5:	3625dd90af376cb3fedb8acc3feaf02d
 URL:		http://hackage.haskell.org/package/th-abstraction
 BuildRequires:	ghc >= 6.12.3
-BuildRequires:	ghc-base >= 3
+BuildRequires:	ghc-base >= 4.3
+BuildRequires:	ghc-base < 5
 BuildRequires:	ghc-containers >= 0.4
+BuildRequires:	ghc-containers < 0.7
 BuildRequires:	ghc-ghc-prim
 BuildRequires:	ghc-template-haskell >= 2.5
+BuildRequires:	ghc-template-haskell < 2.17
 %if %{with prof}
 BuildRequires:	ghc-prof >= 6.12.3
-BuildRequires:	ghc-base-prof >= 3
+BuildRequires:	ghc-base-prof >= 4.3
 BuildRequires:	ghc-containers-prof >= 0.4
 BuildRequires:	ghc-ghc-prim-prof
 BuildRequires:	ghc-template-haskell-prof >= 2.4
@@ -45,6 +49,12 @@ This package normalizes variations in the interface for inspecting
 datatype information via Template Haskell so that packages and support
 a single, easier to use informational datatype while supporting many
 versions of Template Haskell.
+
+%description -l pl.UTF-8
+Ten pakiet normalizuje warianty inrerfejsu do badania informacji o
+typach danych poprzez Template Haskell, dzięki czemu pakiety mogą
+obsługiwać jeden, prostszy w użyciu typ danych informacyjnych,
+obsługując jednocześnie wiele wersji Template Haskell.
 
 %package prof
 Summary:	Profiling %{pkgname} library for GHC
