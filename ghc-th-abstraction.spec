@@ -14,7 +14,7 @@ Group:		Development/Languages
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	3625dd90af376cb3fedb8acc3feaf02d
 URL:		http://hackage.haskell.org/package/th-abstraction
-BuildRequires:	ghc >= 6.12.3
+BuildRequires:	ghc >= 7.0.1
 BuildRequires:	ghc-base >= 4.3
 BuildRequires:	ghc-base < 5
 BuildRequires:	ghc-containers >= 0.4
@@ -23,7 +23,7 @@ BuildRequires:	ghc-ghc-prim
 BuildRequires:	ghc-template-haskell >= 2.5
 BuildRequires:	ghc-template-haskell < 2.17
 %if %{with prof}
-BuildRequires:	ghc-prof >= 6.12.3
+BuildRequires:	ghc-prof >= 7.0.1
 BuildRequires:	ghc-base-prof >= 4.3
 BuildRequires:	ghc-containers-prof >= 0.4
 BuildRequires:	ghc-ghc-prim-prof
@@ -61,10 +61,10 @@ Summary:	Profiling %{pkgname} library for GHC
 Summary(pl.UTF-8):	Biblioteka profilująca %{pkgname} dla GHC.
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	ghc-base-prof >= 3
+Requires:	ghc-base-prof >= 4.3
 Requires:	ghc-containers-prof >= 0.4
 Requires:	ghc-ghc-prim-prof
-Requires:	ghc-template-haskell-prof >= 2.4
+Requires:	ghc-template-haskell-prof >= 2.5
 
 %description prof
 Profiling %{pkgname} library for GHC. Should be installed when GHC's
