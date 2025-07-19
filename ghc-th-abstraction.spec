@@ -27,15 +27,15 @@ BuildRequires:	ghc-prof >= 6.12.3
 BuildRequires:	ghc-base-prof >= 4.3
 BuildRequires:	ghc-containers-prof >= 0.4
 BuildRequires:	ghc-ghc-prim-prof
-BuildRequires:	ghc-template-haskell-prof >= 2.4
+BuildRequires:	ghc-template-haskell-prof >= 2.5
 %endif
 BuildRequires:	rpmbuild(macros) >= 1.608
 Requires(post,postun):	/usr/bin/ghc-pkg
 %requires_eq	ghc
-Requires:	ghc-base >= 3
+Requires:	ghc-base >= 4.3
 Requires:	ghc-containers >= 0.4
 Requires:	ghc-ghc-prim
-Requires:	ghc-template-haskell >= 2.4
+Requires:	ghc-template-haskell >= 2.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # debuginfo is not useful for ghc
